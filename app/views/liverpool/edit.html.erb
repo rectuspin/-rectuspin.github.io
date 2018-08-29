@@ -1,0 +1,16 @@
+<p> Edit Player Profile</p>
+
+
+
+
+<form action='/liverpool/update/<%=@list.id%>' method='post'>
+    Name: <input type="text" name="name" value='<%=@list.name%>'></input><br>
+    Year of Birth: <input type="text" name="year_birth" value='<%=@list.year_birth%>'></input><br>
+    Height: <input type="text" name="height" value='<%=@list.height%>'></input><br>
+    Weight: <input type="text" name="weight" value='<%=@list.weight%>'></input><br>
+    Position: <input type="text" name="position" value='<%=@list.position%>'></input><br><br>
+    <input type="submit" value="edit"></input>
+    
+</form>
+
+

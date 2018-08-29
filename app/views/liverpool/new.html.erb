@@ -1,0 +1,28 @@
+<p>Add Player Profile</p>
+
+
+<%= form_for @list, url: liverpool_create_path do |x| %>
+    Name: <%= x.text_field :name%><br>
+    year_birth:<%= x.text_field :year_birth %><br>
+    height :<%= x.text_field :height%><br>
+    weight: <%= x.text_field :weight %><br>
+    position: <%= x.text_field :position%><br>
+    
+    <%= x.submit %>
+
+<%end%>
+
+
+
+
+<!--<form action="/liverpool/create" method="post">-->
+<!--    Name: <input type="text" name="input_name"></input><br>-->
+<!--    Year of Birth: <input type="text" name="input_year_birth"></input><br>-->
+<!--    Height: <input type="text" name="input_height"></input><br>-->
+<!--    Weight: <input type="text" name="input_weight"></input><br>-->
+<!--    Position: <input type="text" name="input_position"></input><br><br>-->
+<!--    <input type="submit" value="submit"></input>-->
+    
+<!--</form>-->
+
+

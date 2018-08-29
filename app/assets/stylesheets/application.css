@@ -1,0 +1,134 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+
+*{
+    box-sizing: border-box;
+}
+p{
+    font-size: 35px;
+    text-align: center;
+    font-family: Georgia;
+    font-weight: bold;
+    
+}
+body{
+    margin: auto;
+    
+}
+header{
+    height:200px;
+    background-color: #b33939;
+    border-bottom: 1px solid gray;
+    border-radius:0 0 12px 12px;
+}
+h3{
+    margin: 0px;
+    text-align: center;
+    color: #FAF0E6;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 35px;
+    margin: 0px;
+    line-height: 150px;
+    color: white;
+}
+h2{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+h5{
+    color: gray;
+}
+main::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+sidebar{
+    float: left;
+    margin: 50px 50px 50px 50px;
+    
+}
+
+middle{
+    
+    float: left;
+}
+
+right{
+    float:left;
+}
+footer{
+    
+    height:250px;
+    background-color: #b33939;
+    border-top: 1px solid gray;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+}
+.picture1{
+    display: block;
+   
+    margin: auto;
+    height: 300px;
+}
+.picture2{
+    height: 100px;
+}
+
+/*.picture{*/
+    
+/*    display: block;*/
+/*    margin: 0 auto;*/
+/*    width: 500px;*/
+/*}*/
+.submit{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 300%;
+    margin: auto;
+    /*border: 2px solid #636e72;*/
+    /*border-radius: 5px 5px 5px 5px;*/
+    /*background-color: #dfe6e9;*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+table, th, td{
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: auto;
+    font-size: 25px;
+    font-family: serif;
+    font-weight:bold;
+}
+
+.function{
+    margin-left: 5px;
+    font-size:15px;
+}
+
+form{
+    text-align: center;
+}

@@ -1,0 +1,105 @@
+
+<html>
+    <head>
+        
+        <title>Liverpool FC</title>
+        
+    </head>
+    <body>
+        <header>
+            <h1> Welcome to Liverpool FC </h1>
+            <h3> where your dreams come true </h3>
+        </header>
+        
+        <sidebar>
+            <ul>
+            <li><a href="http://www.liverpoolfc.com/welcome-to-liverpool-fc">Liverpool FC Official Homepage </a></li><br>
+            <li><a href="https://korea.store.liverpoolfc.com/?lang=kr&utm_source=lfcuk&utm_medium=redirect&utm_campaign=ip">Liverpool FC Online Store Korea </a></li><br>
+            <li><a href="https://www.facebook.com/SouthKoreaLFC/">Liverpool FC Facebook Korea </a></li><br>
+            </ul>
+        </sidebar>
+        
+        <main>
+            
+            <middle>
+            <img class="picture1" src="/assets/champions_league_winning.jpg"/>
+           
+            <h2>-Player List-</Player></h2>
+                 <table>
+                <tr>
+                    <th>Name </th>
+                    <th>Year of Birth </th> 
+                    <th>Height(cm) </th>
+                    <th>Weight(kg) </th>
+                    <th>Position </th>
+                    <th>         </th>
+                </tr>
+                <%@lists.each do |list|%>
+                <tr>
+                    <th><%=list.name%></th>
+                    <th><%=list.year_birth%></th>
+                    <th><%=list.height%></th>
+                    <th><%=list.weight%></th>
+                    <th><%=list.position%></th>
+                    <th><div class="function"><a href='/liverpool/destroy/<%=list.id%>'><button onclick="myFunction1()">Delete</button></a>
+                    
+                    
+                    <!--<%= link_to '수정', liverpool_edit_path(list_id: list.id) %>-->
+                    
+                    <!--<%= link_to '수정', {controller: :liverpool, action: :edit, list_id: list.id} %>-->
+                    <!--id가 아니라 list_id로 해줘야함-->
+  
+                    <!--<%= link_to '수정', "/liverpool/edit/#{list.id}/" %>-->
+                    <a href='/liverpool/edit/<%=list.id%>'><button onclick="myFunction2()">Edit</button></a>
+                    </div></th>
+                </tr>
+                <script>
+                    function myFunction1() {
+                    alert("Delete the post");
+                    }
+                    function myFunction2() {
+                    alert("Go to editing page");
+                    }
+                </script>
+                <%end%>   
+            </table>
+            
+            
+            <div class="submit">
+                <a href="/liverpool/new"><button onclick="myFunction()">Add Player Profile</button> </a>
+                </div><br>
+            </middle>
+            
+            <right>
+                <h4>방문자 방명록</h4>
+                <h5>자유롭게 써주세요</h5>
+                <%@guests.each do |guest|%>
+                    <%=guest.content%>
+                    <tr>
+                    <th><div class="function"><a href='/liverpool/guest_destroy/<%=guest.id%>'><button onclick="myFunction1()">Delete</button></a>
+                    <a href='/liverpool/guest_edit/<%=guest.id%>'><button onclick="myFunction2()">Edit</button></a></div></th>
+                    <br><br>
+                <%end%>
+                
+                
+                
+            </right>
+
+
+        </main>
+        <footer>
+           <h2>You'll Never Walk Alone</h2>
+           <img class="picture2" src="/assets/logo.jpg"/>
+           <!--<audio src="https://www.youtube.com/watch?v=a9sFd3Ennhs" autoplay controls loop>-->
+           <!--   <p>Your browser does not support HTML5 audio playback</p>-->
+           <!-- </audio>-->
+
+<!--</audio>-->
+        </footer>
+    </body>
+    
+    
+    <%= image_tag "stand.jpg", class:"picture1" %>
+    
+</html>
+    
